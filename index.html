@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdulbasit — AI Creator & Web3 Marketer</title>
+  <meta name="description" content="Portfolio of Abdulbasit (@ayoadhe) — Growth Marketer, AI Creator, and Prediction Market Specialist.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #09090b; /* zinc-950 */
+      color: #fafafa; /* zinc-50 */
+      overflow-x: hidden;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    /* 10-year experienced designer touches: Smooth glassmorphism, refined borders, premium glows */
+    .glass-card {
+      background: linear-gradient(180deg, rgba(39, 39, 42, 0.4) 0%, rgba(24, 24, 27, 0.6) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(249, 115, 22, 0.3); /* orange-500 */
+      box-shadow: 0 15px 35px -10px rgba(249, 115, 22, 0.15), 0 0 15px -5px rgba(236, 72, 153, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    /* Fiery accent glow */
+    .fiery-glow {
+      box-shadow: 0 0 40px -10px rgba(249, 115, 22, 0.4);
+    }
+    
+    /* Premium mesh gradient background */
+    .mesh-gradient {
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(249, 115, 22, 0.08) 0px, transparent 40%), /* Orange */
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.08) 0px, transparent 40%), /* Pink */
+        radial-gradient(at 50% 100%, rgba(168, 85, 247, 0.05) 0px, transparent 50%); /* Purple */
+    }
+    
+    /* Fallback for broken images to keep UI clean */
+    img {
+      background-color: #18181b; /* zinc-900 */
+      color: transparent;
+    }
+  </style>
+</head>
+<body class="min-h-screen mesh-gradient text-zinc-300 selection:bg-orange-500/20 selection:text-orange-200">
+
+  <!-- Premium Status Bar -->
+  <div class="border-b border-orange-500/20 bg-gradient-to-r from-orange-950/40 via-pink-950/40 to-purple-950/40 px-4 py-2.5 text-center text-xs text-orange-300/90 tracking-wide">
+    <span class="inline-flex items-center gap-2 font-semibold">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+      </span>
+      Available for Creator Bounties, Prediction Markets & AI Content Campaigns
+    </span>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-[#09090b]/80 backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="h-10 w-10 rounded-xl overflow-hidden border border-orange-500/20 group-hover:border-orange-500/50 transition-colors duration-300 bg-zinc-900 flex items-center justify-center">
+          <img src="./assets/pfp.jpeg" alt="Abdulbasit Avatar" class="h-full w-full object-cover">
+        </div>
+        <div>
+          <span class="font-bold tracking-tight text-white block text-sm group-hover:text-orange-400 transition-colors">Abdulbasit</span>
+          <span class="text-[11px] text-zinc-500 font-mono-code block -mt-0.5">@ayoadhe</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+        <a href="#stats" class="hover:text-orange-400 transition-colors">Proof & Stats</a>
+        <a href="#specialties" class="hover:text-orange-400 transition-colors">Expertise</a>
+        <a href="#contact" class="hover:text-orange-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://x.com/ayoadhe" target="_blank" rel="noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white transition" title="X Profile">
+          <i data-lucide="twitter" class="w-4 h-4"></i>
+        </a>
+        <a href="https://t.me/ayoadhe" target="_blank" rel="noreferrer" class="flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gradient-to-r from-orange-500/10 to-pink-500/10 border border-orange-500/30 text-orange-400 hover:from-orange-500 hover:to-pink-500 hover:text-white hover:border-transparent font-semibold text-xs transition-all duration-300">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span>Telegram</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-12 sm:pt-24 sm:pb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-8 space-y-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/10 text-orange-400 text-xs font-mono-code font-semibold tracking-wide">
+          <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+          DEFI • AI CREATOR • PREDICTION MARKETS
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tighter text-white leading-[1.1]">
+          High-Visibility Growth for <br class="hidden sm:block">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-500 to-fuchsia-500">Web3 Ecosystems.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-zinc-400 max-w-2xl font-light leading-relaxed">
+          I'm <strong class="text-zinc-100 font-semibold">Abdulbasit</strong>, an AI Creator and Web3 Growth Marketer. I build AI-driven narratives, scale verified referral funnels, and produce high-quality digital assets (including AI video) to drive real volume to decentralized platforms.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="https://t.me/ayoadhe" target="_blank" rel="noreferrer" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm hover:from-orange-400 hover:to-pink-500 transition-all duration-300 flex items-center gap-2 fiery-glow">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Initiate Campaign</span>
+          </a>
+          <a href="https://x.com/ayoadhe" target="_blank" rel="noreferrer" class="px-6 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 font-semibold text-sm hover:border-zinc-600 hover:text-white transition-all duration-300 flex items-center gap-2">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+            <span>Follow on X (@ayoadhe)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile Avatar Card -->
+      <div class="lg:col-span-4 flex justify-center lg:justify-end">
+        <div class="glass-card rounded-3xl p-4 w-full max-w-xs relative group">
+          <div class="relative aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 mb-5 flex items-center justify-center text-zinc-700">
+            <img src="./assets/pfp.jpeg" alt="Abdulbasit profile photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-black/0"></div>
+            <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10 text-[10px] font-mono-code text-orange-400 font-medium">
+              ● AI CREATOR
+            </div>
+          </div>
+          <div class="space-y-1 px-1">
+            <h3 class="text-white font-bold text-lg tracking-tight">Abdulbasit</h3>
+            <p class="text-sm text-zinc-400">Web3 Marketer & AI Specialist</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-zinc-500 font-mono-code px-1">
+            <span>NETWORK</span>
+            <span class="text-orange-400 font-medium bg-orange-400/10 px-2 py-0.5 rounded">Solana / Multi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified Proof / Metrics Grid -->
+  <section id="stats" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <div class="mb-10">
+      <div class="text-xs font-mono-code uppercase tracking-widest text-orange-500 font-bold mb-2">Traction & Verified Numbers</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Proof of Execution</h2>
+      <p class="text-zinc-400 text-base mt-3 max-w-2xl leading-relaxed">Real referral volumes, creator onboarding, and campaign conversions backed by live dashboard data.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Proof 1: Gib.work -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-5">
+            <span class="px-3 py-1.5 rounded-lg text-[10px] font-mono-code font-bold bg-orange-500/10 text-orange-400 border border-orange-500/20">GIB.WORK</span>
+            <span class="text-[10px] text-zinc-500 font-mono-code uppercase tracking-wider">Bounties & Referrals</span>
+          </div>
+          
+          <div class="rounded-xl overflow-hidden border border-white/5 bg-zinc-900/50 mb-5 aspect-[16/9] flex items-center justify-center">
+            <img src="./assets/gibwork-proof.jpeg" alt="Gib.work Proof" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 text-center py-4 border-y border-white/5 my-2">
+            <div>
+              <div class="text-2xl font-black text-white">8</div>
+              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Payments</div>
+            </div>
+            <div class="border-x border-white/5">
+              <div class="text-2xl font-black text-orange-400">352</div>
+              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Pending</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-white">$1k</div>
+              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Per Ref</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 flex items-center justify-between text-xs font-mono-code text-zinc-400 bg-zinc-900/80 px-4 py-2.5 rounded-xl border border-white/5">
+          <span class="truncate">gib.work?ref=abdulbasit</span>
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500 shrink-0 ml-2"></i>
+        </div>
+      </div>
+
+      <!-- Proof 2: Ngoat.xyz -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-5">
+            <span class="px-3 py-1.5 rounded-lg text-[10px] font-mono-code font-bold bg-pink-500/10 text-pink-400 border border-pink-500/20">NGOAT.XYZ</span>
+            <span class="text-[10px] text-zinc-500 font-mono-code uppercase tracking-wider">Prediction Protocol</span>
+          </div>
+          
+          <div class="rounded-xl overflow-hidden border border-white/5 bg-zinc-900/50 mb-5 aspect-[16/9] flex items-center justify-center">
+            <img src="./assets/ngoat-proof.jpeg" alt="Ngoat Proof" class="w-full h-full object-cover object-top opacity-90 transition-opacity">
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 text-center py-4 border-y border-white/5 my-2">
+            <div>
+              <div class="text-2xl font-black text-white">269</div>
+              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Referrals</div>
+            </div>
+            <div class="border-x border-white/5">
+              <div class="text-2xl font-black text-pink-400">+2k</div>
+              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">NGC Bonus</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-white">33%</div>
+              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Win Rate</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 flex items-center justify-between text-xs font-mono-code text-zinc-400 bg-zinc-900/80 px-4 py-2.5 rounded-xl border border-white/5">
+          <span class="truncate">ngoat.xyz/register?ref=54C9...</span>
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-pink-500 shrink-0 ml-2"></i>
+        </div>
+      </div>
+
+      <!-- Proof 3: Traction -->
+      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-5">
+            <span class="px-3 py-1.5 rounded-lg text-[10px] font-mono-code font-bold bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20">TRACTION</span>
+            <span class="text-[10px] text-zinc-500 font-mono-code uppercase tracking-wider">Creator Network</span>
+          </div>
+          
+          <div class="rounded-xl overflow-hidden border border-white/5 bg-zinc-900/50 mb-5 aspect-[16/9] flex items-center justify-center">
+            <img src="./assets/traction-proof.jpeg" alt="Traction Proof" class="w-full h-full object-cover opacity-90 transition-opacity">
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 text-center py-4 border-y border-white/5 my-2">
+            <div>
+              <div class="text-2xl font-black text-fuchsia-400">51</div>
+              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Creators Referred</div>
+            </div>
+            <div class="border-l border-white/5">
+              <div class="text-2xl font-black text-white">100%</div>
+              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Organic Funnel</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 flex items-center justify-between text-xs font-mono-code text-zinc-400 bg-zinc-900/80 px-4 py-2.5 rounded-xl border border-white/5">
+          <span class="truncate">usetraction.xyz/?ref=PDV...</span>
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-fuchsia-500 shrink-0 ml-2"></i>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section id="specialties" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+    <div class="mb-10">
+      <div class="text-xs font-mono-code uppercase tracking-widest text-pink-500 font-bold mb-2">Capabilities</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">What I Bring To Ecosystems</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Skill 1: AI Content Creator -->
+      <div class="glass-card rounded-3xl p-8">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500/20 to-pink-500/20 border border-orange-500/30 text-orange-400 flex items-center justify-center mb-6 shadow-inner">
+          <i data-lucide="cpu" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">AI Content Creation</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          Crafting complete AI-driven narratives. From structuring core brand stories to generating high-quality assets (with AI video as an impactful addition) that capture attention across Web3.
+        </p>
+      </div>
+
+      <!-- Skill 2: Prediction Markets -->
+      <div class="glass-card rounded-3xl p-8">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500/20 to-fuchsia-500/20 border border-pink-500/30 text-pink-400 flex items-center justify-center mb-6 shadow-inner">
+          <i data-lucide="trending-up" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Affiliate & Predictions</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          Scaling organic affiliate funnels, designing liquidity incentives, and successfully onboarding active users and bettors into decentralized market books.
+        </p>
+      </div>
+
+      <!-- Skill 3: Creator Distribution -->
+      <div class="glass-card rounded-3xl p-8">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-500/20 to-purple-500/20 border border-fuchsia-500/30 text-fuchsia-400 flex items-center justify-center mb-6 shadow-inner">
+          <i data-lucide="share-2" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Creator Distribution</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          Direct creator syndication across X and Telegram. Driving high-intent community connections, bounty participation, and building sustainable retention loops.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Contact Area -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+    <div class="glass-card rounded-[2.5rem] p-8 sm:p-16 relative overflow-hidden border border-orange-500/20">
+      <!-- Decorative background glow -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-orange-500/10 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-pink-500/10 blur-3xl"></div>
+      
+      <div class="max-w-2xl space-y-6 relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 text-orange-400 text-xs font-mono-code font-bold tracking-wide border border-orange-500/20">
+          READY FOR NEW CAMPAIGNS
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">Let's scale your project's traction.</h2>
+        <p class="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl">
+          Whether you need comprehensive AI content architecture, a dedicated growth partner, or referral campaign dominance across X and Telegram, let's talk.
+        </p>
+        
+        <div class="flex flex-wrap items-center gap-4 pt-6">
+          <a href="https://t.me/ayoadhe" target="_blank" rel="noreferrer" class="px-8 py-4 rounded-xl bg-white text-black font-extrabold text-sm hover:bg-zinc-200 transition-colors duration-300 flex items-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Message @ayoadhe on Telegram</span>
+          </a>
+          <a href="https://x.com/ayoadhe" target="_blank" rel="noreferrer" class="px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-sm hover:bg-zinc-800 transition-colors duration-300 flex items-center gap-2">
+            <i data-lucide="twitter" class="w-4 h-4"></i>
+            <span>DM on X (@ayoadhe)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5 py-10 text-center text-xs text-zinc-600 font-mono-code mt-10">
+    <p>© 2026 Abdulbasit (@ayoadhe). All rights reserved.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
