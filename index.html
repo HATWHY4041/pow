@@ -117,7 +117,7 @@ h2 { font-family: var(--display); font-weight: 900; font-stretch: 70%; text-tran
 @media (max-width: 820px) { .intro { grid-template-columns: minmax(0, 1fr); } }
 
 /* ============ CRAFTS ============ */
-.crafts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.crafts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .craft { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
 .craft .viz { height: 220px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
 .craft .txt { padding: 24px 24px 28px; display: grid; gap: 10px; }
@@ -321,7 +321,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
     <nav aria-label="Sections">
       <a class="sm-hide" href="#crafts">What I do</a>
       <a class="sm-hide" href="#results">Results</a>
-      <a class="sm-hide" href="#reel">Reel</a>
       <a href="#contact">Hire me</a>
     </nav>
   </div>
@@ -336,13 +335,13 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
     <div class="wrap hero-copy">
       <h1 class="name"><span>Abdul</span><span>basit</span></h1>
       <p class="role-line">The <b id="role">growth marketer</b> your launch needs.</p>
-      <p class="lede">I make Web3 projects impossible to scroll past. <strong>I write the threads, make the AI videos and run the referral campaigns</strong> that turn attention into signups, volume and community.</p>
+      <p class="lede">I make Web3 projects impossible to scroll past. <strong>I write the threads and run the referral campaigns</strong> that turn attention into signups, volume and community.</p>
       <div class="actions">
         <a class="btn hot" href="https://t.me/ayoadhe" target="_blank" rel="noreferrer">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1.1-1 .2-1.5L20.5 2.9c.9-.3 1.7.2 1.4 1.4Z"/></svg>
           Start a project
         </a>
-        <a class="btn" href="#reel">Watch the reel</a>
+        <a class="btn" href="#results">See the results</a>
       </div>
       <div class="timecode" aria-hidden="true"><span id="tc">00:00:00:00</span></div>
     </div>
@@ -350,16 +349,16 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
 
   <div class="ticker" aria-label="Projects I've worked with">
     <div class="ticker-track">
-      <span>Wahoo Predict</span><span>Agent Dojo</span><span>Fomopoly</span><span>DOPE</span><span>Ngoat</span><span>Gib.work</span><span>Traction</span><span>Pleco Creators</span>
-      <span aria-hidden="true">Wahoo Predict</span><span aria-hidden="true">Agent Dojo</span><span aria-hidden="true">Fomopoly</span><span aria-hidden="true">DOPE</span><span aria-hidden="true">Ngoat</span><span aria-hidden="true">Gib.work</span><span aria-hidden="true">Traction</span><span aria-hidden="true">Pleco Creators</span>
+      <span>Wahoo Predict</span><span>Ngoat</span><span>Gib.work</span><span>Traction</span><span>Pleco Creators</span>
+      <span aria-hidden="true">Wahoo Predict</span><span aria-hidden="true">Ngoat</span><span aria-hidden="true">Gib.work</span><span aria-hidden="true">Traction</span><span aria-hidden="true">Pleco Creators</span>
     </div>
   </div>
 
   <section class="block" id="crafts">
     <div class="wrap">
       <div class="intro">
-        <h2>Three crafts, one goal</h2>
-        <p>Most projects hire a marketer, a writer and a video editor separately. I do all three, so the story, the visuals and the growth plan come out of one head and point in one direction.</p>
+        <h2>Two crafts, one goal</h2>
+        <p>Most projects hire a marketer and a writer separately. I do both, so the story and the growth plan come out of one head and point in one direction.</p>
       </div>
       <div class="crafts">
         <article class="craft">
@@ -394,17 +393,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
             <h3>Content writing</h3>
             <p>Threads, explainers and launch copy that make complex protocols simple. People read to the end, understand the product, and click through.</p>
             <ul><li>X threads</li><li>Explainers</li><li>Launch copy</li><li>Prediction markets creator</li><li>Perps creator</li></ul>
-          </div>
-        </article>
-        <article class="craft">
-          <div class="viz viz-ai" aria-hidden="true">
-            <div class="frame"></div>
-            <div class="hud"><span>Generating</span><span id="frames">frame 0142</span></div>
-          </div>
-          <div class="txt">
-            <h3>AI creation</h3>
-            <p>Cinematic AI video, motion graphics and voiceovers. I turn a feature launch or a referral program into something people stop and watch.</p>
-            <ul><li>AI video</li><li>Motion graphics</li><li>Voiceover</li></ul>
           </div>
         </article>
       </div>
@@ -469,77 +457,12 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
       </div>
     </div>
   </section>
-
-  <section class="block" id="reel">
-    <div class="wrap">
-      <div class="intro">
-        <h2>The reel</h2>
-        <p>Recent motion graphics and promo videos for Web3 games and platforms. Each one pairs a script I wrote with AI visuals and voiceover.</p>
-      </div>
-      <div class="reel">
-        <article class="cut">
-          <div class="screen dojo" aria-label="Animated preview: two pixel fighters battling in the Agent Dojo arena">
-            <div class="hud"><span class="rec">Agent Dojo promo</span><span class="tc">00:00</span></div>
-            <div class="logo">AGENT DOJO</div>
-            <div class="hp l"><i></i></div><div class="hp r"><i></i></div>
-            <div class="fighter a"></div><div class="fighter b"></div>
-            <div class="ko">K.O.!</div>
-            <div class="turn">TURN 07<br>YOUR AGENT USES COUNTER</div>
-          </div>
-          <div class="cut-copy">
-            <h3>Agent Dojo</h3>
-            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2116032349859119531" target="_blank" rel="noreferrer">Check the post on X</a></div>
-          </div>
-        </article>
-
-        <article class="cut">
-          <div class="screen fomo" aria-label="Animated preview: land plots lighting up and selling on the Fomopoly board">
-            <div class="hud"><span class="rec">Fomopoly promo</span><span class="tc">00:00</span></div>
-            <div class="title">FOMO<br><span>POLY</span></div>
-            <div class="price">Plot #142 value<b id="plot">+12.4%</b></div>
-            <div class="board" aria-hidden="true"></div>
-            <span class="sold s1">SOLD</span><span class="sold s2">SOLD</span><span class="sold s3">SOLD</span>
-          </div>
-          <div class="cut-copy">
-            <h3>Fomopoly</h3>
-            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2115782618742489441" target="_blank" rel="noreferrer">Check the post on X</a></div>
-          </div>
-        </article>
-
-        <article class="cut">
-          <div class="screen dope" aria-label="Animated preview: a cursor walking through the DOPE affiliate signup steps">
-            <div class="hud"><span class="rec">DOPE affiliate</span><span class="tc">00:00</span></div>
-            <div class="browser">
-              <div class="chrome"><i></i><i></i><i></i><span>dope.xyz/affiliate</span></div>
-              <div class="pg">
-                <div class="h">Earn with <span>DOPE</span></div>
-                <div class="steps"><div><b>1</b>Connect wallet</div><div><b>2</b>Get your link</div><div><b>3</b>Share and earn</div></div>
-                <div class="join">Join affiliate program</div>
-              </div>
-            </div>
-            <div class="cursor"></div>
-            <div class="toast">+ Commission earned</div>
-          </div>
-          <div class="cut-copy">
-            <h3>DOPE</h3>
-            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2116099127755022785" target="_blank" rel="noreferrer">Check the post on X</a></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 </main>
 
 <section class="credits" id="contact">
   <div class="wrap">
-    <div class="roll" aria-label="Credits">
-      <div><span>Growth strategy by</span><b>Abdulbasit</b></div>
-      <div><span>Written by</span><b>Abdulbasit</b></div>
-      <div><span>AI visuals by</span><b>Abdulbasit</b></div>
-      <div><span>Starring</span><b>Your project</b></div>
-    </div>
     <h2>Your launch is next</h2>
-    <p>Tell me what you're launching and who it's for. I'll come back with a plan for the story, the videos and the growth push.</p>
+    <p>Tell me what you're launching and who it's for. I'll come back with a plan for the story and the growth push.</p>
     <div class="actions">
       <a class="btn hot" href="https://t.me/ayoadhe" target="_blank" rel="noreferrer">Message me on Telegram</a>
       <a class="btn" href="https://x.com/ayoadhe" target="_blank" rel="noreferrer">DM me on X</a>
@@ -607,16 +530,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
     var iv = setInterval(function () { typed.textContent = txt.slice(0, ++n); if (n >= txt.length) { clearInterval(iv); setTimeout(function () { li = (li + 1) % lines.length; typeLine(); }, 2600); } }, 38);
   }
   if (!reduce) setTimeout(typeLine, 2000);
-
-  /* AI frame counter */
-  var fr = 142, frEl = document.getElementById('frames');
-  if (!reduce) setInterval(function () { fr = fr >= 240 ? 1 : fr + 1; frEl.textContent = 'frame ' + String(fr).padStart(4, '0'); }, 1000 / 30);
-
-  /* Fomopoly board + price */
-  var board = document.querySelector('.board');
-  for (var k = 0; k < 24; k++) { var t = document.createElement('i'); t.style.animationDelay = (Math.random() * 5).toFixed(2) + 's'; board.appendChild(t); }
-  var price = 12.4, plot = document.getElementById('plot');
-  if (!reduce) setInterval(function () { price = Math.max(2, price + (Math.random() - .3) * 1.5); plot.textContent = '+' + price.toFixed(1) + '%'; }, 900);
 
   /* Count-up when numbers come into view */
   var fmt = new Intl.NumberFormat('en-US');
