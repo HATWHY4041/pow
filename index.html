@@ -1,333 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdulbasit — AI Creator & Web3 Marketer</title>
-  <meta name="description" content="Portfolio of Abdulbasit (@ayoadhe) — Growth Marketer, AI Creator, and Prediction Market Specialist.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #09090b; /* zinc-950 */
-      color: #fafafa; /* zinc-50 */
-      overflow-x: hidden;
-    }
-    .font-mono-code {
-      font-family: 'JetBrains Mono', monospace;
-    }
-    
-    /* 10-year experienced designer touches: Smooth glassmorphism, refined borders, premium glows */
-    .glass-card {
-      background: linear-gradient(180deg, rgba(39, 39, 42, 0.4) 0%, rgba(24, 24, 27, 0.6) 100%);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .glass-card:hover {
-      border-color: rgba(249, 115, 22, 0.3); /* orange-500 */
-      box-shadow: 0 15px 35px -10px rgba(249, 115, 22, 0.15), 0 0 15px -5px rgba(236, 72, 153, 0.1);
-      transform: translateY(-2px);
-    }
-    
-    /* Fiery accent glow */
-    .fiery-glow {
-      box-shadow: 0 0 40px -10px rgba(249, 115, 22, 0.4);
-    }
-    
-    /* Premium mesh gradient background */
-    .mesh-gradient {
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(249, 115, 22, 0.08) 0px, transparent 40%), /* Orange */
-        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.08) 0px, transparent 40%), /* Pink */
-        radial-gradient(at 50% 100%, rgba(168, 85, 247, 0.05) 0px, transparent 50%); /* Purple */
-    }
-    
-    /* Fallback for broken images to keep UI clean */
-    img {
-      background-color: #18181b; /* zinc-900 */
-      color: transparent;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdulbasit Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Abdulbasit (@ayoadhe): growth marketer, content writer and AI creator for Web3.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,300..900&family=Hanken+Grotesk:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+/* Layout: a film. Title sequence, three crafts, the numbers, the reel, end credits. One dark screen, crimson from the avatar's eyes, amber projector light. */
+:root {
+  --screen: #000000;
+  --bone: #efe9e1;
+  --dim: #948c86;
+  --crimson: #e8263f;
+  --amber: #ffb547;
+  --line: rgba(239, 233, 225, .14);
+  --panel: #0d0b0b;
+  --display: "Anybody", "Arial Narrow", Impact, sans-serif;
+  --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --pixel: "Press Start 2P", ui-monospace, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--screen); color: var(--bone); font-family: var(--body); font-size: 17px; line-height: 1.6; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--screen); }
+/* film grain over everything */
+body::after {
+  content: ""; position: fixed; inset: -50%; z-index: 55; pointer-events: none; opacity: .07;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@media (prefers-reduced-motion: no-preference) { body::after { animation: grain .6s steps(4) infinite; } }
+@keyframes grain { 0%{transform:translate(0,0)} 25%{transform:translate(-3%,2%)} 50%{transform:translate(2%,-3%)} 75%{transform:translate(-2%,-1%)} 100%{transform:translate(0,0)} }
+
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Header */
+.top { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 50; mix-blend-mode: difference; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 18px; }
+.mark { font-family: var(--display); font-weight: 800; font-stretch: 130%; font-size: 18px; text-decoration: none; letter-spacing: .02em; }
+.top nav { display: flex; gap: 22px; font-weight: 500; font-size: 15px; }
+.top nav a { text-decoration: none; }
+.top nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 620px) { .top nav .sm-hide { display: none; } }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 24px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; border: 1px solid var(--line); background: rgba(239,233,225,.04); transition: background .2s, color .2s, border-color .2s; }
+.btn:hover { background: var(--bone); color: var(--screen); border-color: var(--bone); }
+.btn.hot { background: var(--crimson); border-color: var(--crimson); color: #fff; }
+.btn.hot:hover { background: var(--bone); border-color: var(--bone); color: var(--screen); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+/* ============ HERO: title sequence ============ */
+.hero { position: relative; min-height: min(920px, 100svh); display: grid; align-items: end; overflow: hidden; isolation: isolate; }
+#embers { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; }
+.hero-still {
+  position: absolute; z-index: -1; right: max(-8vw, -120px); bottom: 0; width: min(62vw, 760px); aspect-ratio: 1;
+  background: url("./assets/pfp.jpeg") center / cover no-repeat;
+  filter: invert(1) grayscale(1) contrast(1.35) brightness(.9);
+  mix-blend-mode: screen; opacity: .5;
+  mask-image: radial-gradient(circle at 55% 45%, #000 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at 55% 45%, #000 30%, transparent 70%);
+}
+.eyes { position: absolute; z-index: -1; right: max(-8vw, -120px); bottom: 0; width: min(62vw, 760px); aspect-ratio: 1; pointer-events: none; }
+.eyes i { position: absolute; width: 5%; height: 2.4%; border-radius: 50%; background: var(--crimson); box-shadow: 0 0 30px 10px rgba(232,38,63,.6); opacity: 0; }
+.eyes i:nth-child(1) { left: 50.5%; top: 49.5%; }
+.eyes i:nth-child(2) { left: 64.5%; top: 52.5%; }
+.hero-copy { padding-block: 140px 72px; display: grid; gap: 26px; position: relative; }
+.kicker { margin: 0; color: var(--amber); font-weight: 500; font-size: 16px; display: flex; gap: 10px; align-items: center; }
+.kicker::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--crimson); box-shadow: 0 0 12px var(--crimson); }
+.name {
+  margin: 0; font-family: var(--display); font-weight: 900; font-stretch: 62%;
+  font-size: clamp(64px, 15.5vw, 230px); line-height: .82; letter-spacing: -.01em; text-transform: uppercase;
+}
+.name span { display: block; }
+.role-line { margin: 0; font-family: var(--display); font-weight: 300; font-stretch: 110%; font-size: clamp(26px, 3.6vw, 48px); line-height: 1.1; max-width: 22ch; text-wrap: balance; }
+.role-line b { font-weight: 800; color: var(--crimson); display: inline-block; min-width: 1ch; }
+.hero .lede { margin: 0; max-width: 33em; color: var(--dim); font-size: 18px; }
+.hero .lede strong { color: var(--bone); font-weight: 500; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.timecode { position: absolute; right: 0; bottom: 72px; font-variant-numeric: tabular-nums; color: var(--dim); font-size: 13px; display: flex; gap: 8px; align-items: center; }
+.timecode::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--crimson); }
+@media (max-width: 760px) { .timecode { display: none; } .hero-still, .eyes { width: 110vw; right: -40vw; opacity: .35; } }
+
+/* letterbox bars: the one orchestrated opening */
+.bar { position: absolute; left: 0; right: 0; height: 0; background: var(--screen); z-index: 5; pointer-events: none; }
+.bar.t { top: 0; } .bar.b { bottom: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .bar { height: 50.5%; animation: open 1.5s .25s cubic-bezier(.8,0,.1,1) forwards; }
+  @keyframes open { to { height: 0; } }
+  .name span { animation: stretch 1.8s .5s cubic-bezier(.2,.7,.1,1) both; }
+  .name span + span { animation-delay: .62s; }
+  @keyframes stretch { from { font-stretch: 150%; letter-spacing: .2em; opacity: 0; filter: blur(12px); } to { font-stretch: 62%; letter-spacing: -.01em; opacity: 1; filter: blur(0); } }
+  .eyes i { animation: glint 6s 1.8s ease-in-out infinite; }
+  @keyframes glint { 0%, 80%, 100% { opacity: 0; } 85%, 92% { opacity: .9; } }
+}
+
+/* ticker */
+.ticker { border-block: 1px solid var(--line); overflow: hidden; padding-block: 18px; }
+.ticker-track { display: flex; width: max-content; gap: 48px; font-family: var(--display); font-weight: 700; font-stretch: 120%; font-size: clamp(20px, 2.4vw, 30px); color: var(--dim); white-space: nowrap; }
+.ticker-track span { display: inline-flex; align-items: center; gap: 48px; }
+.ticker-track span::after { content: ""; width: 10px; height: 10px; background: var(--crimson); transform: rotate(45deg); }
+@media (prefers-reduced-motion: no-preference) { .ticker-track { animation: tick 38s linear infinite; } }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* Sections */
+section.block { padding-block: clamp(80px, 11vw, 150px); }
+h2 { font-family: var(--display); font-weight: 900; font-stretch: 70%; text-transform: uppercase; font-size: clamp(48px, 8.5vw, 120px); line-height: .88; margin: 0; text-wrap: balance; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 48px; align-items: end; margin-bottom: clamp(40px, 6vw, 72px); }
+.intro p { margin: 0; color: var(--dim); max-width: 32em; font-size: 18px; }
+@media (max-width: 820px) { .intro { grid-template-columns: minmax(0, 1fr); } }
+
+/* ============ CRAFTS ============ */
+.crafts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.craft { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.craft .viz { height: 220px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.craft .txt { padding: 24px 24px 28px; display: grid; gap: 10px; }
+.craft h3 { margin: 0; font-family: var(--display); font-weight: 800; font-stretch: 105%; font-size: 30px; line-height: 1; }
+.craft p { margin: 0; color: var(--dim); }
+.craft ul { margin: 6px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.craft li { font-size: 13px; padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--bone); }
+@media (max-width: 900px) { .crafts { grid-template-columns: minmax(0, 1fr); } }
+
+/* growth viz */
+.viz-growth svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.viz-growth .grid line { stroke: var(--line); }
+.viz-growth .area { fill: url(#gArea); }
+.viz-growth .curve { fill: none; stroke: var(--crimson); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 700; stroke-dashoffset: 0; }
+.viz-growth .dot { fill: var(--amber); }
+.viz-growth .tag { position: absolute; right: 18px; top: 16px; font-family: var(--display); font-weight: 800; font-size: 34px; font-stretch: 80%; color: var(--amber); font-variant-numeric: tabular-nums; }
+.viz-growth .tag small { display: block; font-family: var(--body); font-size: 12px; font-weight: 500; color: var(--dim); text-align: right; }
+@media (prefers-reduced-motion: no-preference) {
+  .viz-growth .curve { animation: draw 4.5s ease-in-out infinite; }
+  .viz-growth .dot { animation: pop 4.5s ease-in-out infinite; transform-origin: 300px 34px; transform-box: view-box; }
+  @keyframes draw { 0% { stroke-dashoffset: 700; } 55%, 100% { stroke-dashoffset: 0; } }
+  @keyframes pop { 0%, 50% { transform: scale(0); } 60%, 92% { transform: scale(1); } 100% { transform: scale(0); } }
+}
+
+/* writing viz: a thread being typed */
+.viz-write { padding: 20px; display: grid; gap: 10px; align-content: start; }
+.tweet { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 10px; }
+.tweet .av { width: 32px; height: 32px; border-radius: 50%; background: url("./assets/pfp.jpeg") center/cover, #fff; }
+.tweet .who { font-size: 13px; color: var(--dim); }
+.tweet .who b { color: var(--bone); }
+.tweet .body { font-size: 15px; line-height: 1.45; min-height: 3em; }
+.caret { display: inline-block; width: 2px; height: 1em; vertical-align: -2px; background: var(--crimson); margin-left: 1px; }
+.stats-row { display: flex; gap: 18px; font-size: 13px; color: var(--dim); padding-left: 42px; font-variant-numeric: tabular-nums; }
+.stats-row b { color: var(--bone); }
+@media (prefers-reduced-motion: no-preference) { .caret { animation: blink 1s steps(1) infinite; } @keyframes blink { 50% { opacity: 0; } } }
+
+/* AI viz: a frame being generated */
+.viz-ai { background: #050404; }
+.viz-ai .frame { position: absolute; inset: 18px; border-radius: 10px; overflow: hidden; background: url("./assets/pfp.jpeg") center 20% / cover, #fff; filter: grayscale(.2) contrast(1.1); }
+.viz-ai .frame::before { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 0 48%, rgba(255,181,71,.65) 50%, transparent 52%); background-size: 100% 220%; mix-blend-mode: screen; }
+.viz-ai .frame::after { content: ""; position: absolute; inset: 0; backdrop-filter: blur(8px) saturate(0); -webkit-backdrop-filter: blur(8px) saturate(0); clip-path: inset(0 0 0 0); }
+.viz-ai .hud { position: absolute; left: 30px; right: 30px; bottom: 28px; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: #fff; text-shadow: 0 1px 4px #000; font-variant-numeric: tabular-nums; }
+.viz-ai .hud span:first-child::before { content: "● "; color: var(--crimson); }
+@media (prefers-reduced-motion: no-preference) {
+  .viz-ai .frame::before { animation: scan 3.2s linear infinite; }
+  .viz-ai .frame::after { animation: resolve 3.2s linear infinite; }
+  @keyframes scan { from { background-position: 0 100%; } to { background-position: 0 -10%; } }
+  @keyframes resolve { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(100% 0 0 0); } }
+}
+
+/* ============ RESULTS ============ */
+.results { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+.res { grid-column: span 4; background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 26px; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.res.lead { grid-column: span 8; grid-row: span 2; background: radial-gradient(120% 100% at 100% 0%, rgba(232,38,63,.22), transparent 55%), var(--panel); grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 24px; align-items: stretch; }
+.res-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.res h3 { margin: 0; font-family: var(--display); font-weight: 800; font-stretch: 110%; font-size: 24px; line-height: 1; }
+.res .what { color: var(--dim); font-size: 14px; }
+.big { font-family: var(--display); font-weight: 900; font-stretch: 65%; font-size: clamp(64px, 7.5vw, 112px); line-height: .85; font-variant-numeric: tabular-nums; margin: 0; }
+.big small { font-size: .3em; font-stretch: 100%; font-weight: 700; color: var(--dim); margin-left: 6px; }
+.res.lead .big { font-size: clamp(88px, 12vw, 180px); color: var(--bone); }
+.res.lead .big em { font-style: normal; color: var(--crimson); }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0; padding: 0; list-style: none; color: var(--dim); font-size: 15px; font-variant-numeric: tabular-nums; }
+.facts b { color: var(--bone); font-weight: 700; }
+.res-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.chip { font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--bone); text-decoration: none; }
+.chip:hover { border-color: var(--bone); }
+.lead-shot { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); min-height: 280px; cursor: zoom-in; padding: 0; background: #0a1430; display: block; width: 100%; }
+.lead-shot img { width: 100%; height: 100%; max-width: 100%; object-fit: cover; object-position: top; display: block; transition: transform .6s ease; }
+.lead-shot:hover img { transform: scale(1.04); }
+.lead-copy { display: grid; gap: 16px; align-content: space-between; min-width: 0; }
+@media (max-width: 980px) { .res, .res.lead { grid-column: span 12; } .res.lead { grid-row: auto; grid-template-columns: minmax(0, 1fr); } }
+@media (min-width: 981px) and (max-width: 1100px) { .res { grid-column: span 6; } .res.lead { grid-column: span 12; grid-row: auto; } }
+
+dialog { border: 0; padding: 0; background: transparent; max-width: min(92vw, 520px); max-height: 90vh; }
+dialog::backdrop { background: rgba(0,0,0,.85); }
+dialog img { display: block; width: 100%; max-height: 82vh; object-fit: contain; border-radius: 14px; }
+dialog form { text-align: center; margin-top: 12px; }
+
+/* ============ REEL ============ */
+.reel { display: grid; gap: clamp(48px, 7vw, 96px); }
+.cut { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 24px 48px; align-items: center; }
+.cut:nth-child(even) .screen { order: 2; }
+.screen { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); isolation: isolate; }
+.screen .hud { position: absolute; z-index: 5; inset: 12px 14px auto; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; color: rgba(255,255,255,.85); text-shadow: 0 1px 3px #000; }
+.screen .hud .rec::before { content: "● "; color: var(--crimson); }
+.cut-copy { display: grid; gap: 14px; min-width: 0; }
+.cut-copy .client { color: var(--amber); font-weight: 700; font-size: 15px; margin: 0; }
+.cut-copy h3 { margin: 0; font-family: var(--display); font-weight: 900; font-stretch: 75%; text-transform: uppercase; font-size: clamp(40px, 5.5vw, 72px); line-height: .9; }
+.cut-copy p { margin: 0; color: var(--dim); max-width: 30em; }
+.cut-copy dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 18px; margin: 4px 0 0; font-size: 15px; }
+.cut-copy dt { color: var(--dim); }
+.cut-copy dd { margin: 0; }
+@media (max-width: 860px) { .cut { grid-template-columns: minmax(0, 1fr); } .cut:nth-child(even) .screen { order: 0; } }
+
+/* Scene: Agent Dojo */
+.dojo { background: linear-gradient(#2a0b10 0 62%, #140405 62% 100%); font-family: var(--pixel); image-rendering: pixelated; }
+.dojo::before { content: ""; position: absolute; inset: 0 0 38% 0; background: repeating-linear-gradient(90deg, rgba(0,0,0,.35) 0 4px, transparent 4px 64px), repeating-linear-gradient(0deg, rgba(0,0,0,.25) 0 4px, transparent 4px 48px); }
+.dojo::after { content: ""; position: absolute; left: 0; right: 0; top: 62%; height: 6px; background: #5c1a22; }
+.dojo .logo { position: absolute; left: 0; right: 0; top: 13%; text-align: center; color: #ff2d46; font-size: clamp(14px, 2.6vw, 26px); text-shadow: 3px 3px 0 #000, 0 0 18px rgba(255,45,70,.6); letter-spacing: .05em; }
+.dojo .hp { position: absolute; top: 31%; width: 34%; height: 12px; background: #000; border: 2px solid #000; }
+.dojo .hp i { display: block; height: 100%; background: #3ef07a; transform-origin: left; }
+.dojo .hp.l { left: 6%; } .dojo .hp.r { right: 6%; transform: scaleX(-1); }
+.dojo .hp.r i { background: #ffd23f; }
+.fighter { position: absolute; bottom: 38%; width: 8px; height: 8px; }
+.fighter.a { left: 26%; color: #e8eaf0; } .fighter.b { right: 30%; color: #ff2d46; transform: scaleX(-1); }
+.fighter::before { content: ""; position: absolute; width: 8px; height: 8px; background: transparent;
+  box-shadow:
+    16px -64px currentColor, 24px -64px currentColor,
+    8px -56px currentColor, 16px -56px #000, 24px -56px currentColor, 32px -56px currentColor,
+    16px -48px currentColor, 24px -48px currentColor,
+    8px -40px currentColor, 16px -40px currentColor, 24px -40px currentColor, 32px -40px currentColor, 40px -40px currentColor,
+    0 -32px currentColor, 16px -32px currentColor, 24px -32px currentColor, 48px -40px currentColor,
+    16px -24px currentColor, 24px -24px currentColor,
+    8px -16px currentColor, 32px -16px currentColor,
+    0 -8px currentColor, 40px -8px currentColor;
+}
+.dojo .ko { position: absolute; left: 0; right: 0; top: 44%; text-align: center; font-size: clamp(22px, 5vw, 46px); color: #ffd23f; text-shadow: 4px 4px 0 #000; opacity: 0; }
+.dojo .turn { position: absolute; left: 6%; bottom: 10%; font-size: clamp(7px, 1.2vw, 11px); color: #f4d7da; line-height: 1.8; }
+@media (prefers-reduced-motion: no-preference) {
+  .fighter.a { animation: bob .5s steps(2) infinite, lungeA 4s steps(8) infinite; }
+  .fighter.b { animation: bob .5s .25s steps(2) infinite, lungeB 4s steps(8) infinite; }
+  @keyframes bob { 50% { margin-bottom: 4px; } }
+  @keyframes lungeA { 0%, 18%, 30%, 100% { translate: 0 0; } 22% { translate: 18% 0; } }
+  @keyframes lungeB { 0%, 48%, 60%, 100% { translate: 0 0; } 52% { translate: -18% 0; } }
+  .dojo .hp.r i { animation: dmgR 8s steps(1) infinite; }
+  .dojo .hp.l i { animation: dmgL 8s steps(1) infinite; }
+  @keyframes dmgR { 0% { transform: scaleX(1); } 23% { transform: scaleX(.6); } 73% { transform: scaleX(.15); } 86%, 100% { transform: scaleX(0); } }
+  @keyframes dmgL { 0% { transform: scaleX(1); } 53% { transform: scaleX(.7); } 100% { transform: scaleX(.7); } }
+  .dojo .ko { animation: ko 8s steps(1) infinite; }
+  @keyframes ko { 0%, 85% { opacity: 0; } 86%, 98% { opacity: 1; } }
+}
+
+/* Scene: Fomopoly */
+.fomo { background: radial-gradient(90% 80% at 50% 110%, #0c3b2a, #04120d 70%); perspective: 700px; }
+.board { position: absolute; left: 50%; top: 56%; width: 64%; aspect-ratio: 1.6; transform: translate(-50%, -50%) rotateX(52deg) rotateZ(-30deg); display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
+.board i { border-radius: 3px; background: #16533d; box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+.fomo .title { position: absolute; left: 6%; top: 12%; font-family: var(--display); font-weight: 900; font-stretch: 120%; font-size: clamp(20px, 3.6vw, 36px); color: #fff; line-height: .9; }
+.fomo .title span { color: #4dff9e; }
+.price { position: absolute; right: 6%; top: 14%; background: rgba(0,0,0,.5); border: 1px solid rgba(77,255,158,.4); border-radius: 10px; padding: 8px 12px; font-size: clamp(10px, 1.5vw, 14px); color: #c8ffe1; font-variant-numeric: tabular-nums; }
+.price b { display: block; font-size: 1.5em; color: #4dff9e; }
+.sold { position: absolute; padding: 4px 9px; border-radius: 6px; background: #ffd23f; color: #000; font-weight: 700; font-size: clamp(9px, 1.3vw, 13px); opacity: 0; }
+.sold.s1 { left: 38%; top: 46%; } .sold.s2 { left: 58%; top: 62%; } .sold.s3 { left: 30%; top: 70%; }
+@media (prefers-reduced-motion: no-preference) {
+  .board i { animation: plot 5s infinite; }
+  @keyframes plot { 0%, 100% { background: #16533d; } 6%, 14% { background: #4dff9e; box-shadow: 0 0 18px #4dff9e; } }
+  .sold { animation: sold 6s infinite; }
+  .sold.s2 { animation-delay: 2s; } .sold.s3 { animation-delay: 4s; }
+  @keyframes sold { 0%, 100% { opacity: 0; transform: translateY(8px); } 8%, 30% { opacity: 1; transform: translateY(0); } 40% { opacity: 0; transform: translateY(-8px); } }
+}
+
+/* Scene: DOPE affiliate walkthrough */
+.dope { background: linear-gradient(135deg, #1b0638, #5a0f6e 60%, #ff4fa3); }
+.browser { position: absolute; left: 9%; right: 9%; top: 16%; bottom: 10%; background: #0f0a16; border-radius: 10px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+.browser .chrome { height: 12%; background: #1d1626; display: flex; align-items: center; gap: 5px; padding: 0 3%; }
+.browser .chrome i { width: 7px; height: 7px; border-radius: 50%; background: #4a3f57; }
+.browser .chrome span { margin-left: 3%; flex: 1; height: 50%; border-radius: 99px; background: #2b2236; font-size: clamp(7px, 1.1vw, 10px); color: #b9a8cf; display: flex; align-items: center; padding-left: 8px; }
+.browser .pg { position: absolute; inset: 12% 0 0; padding: 5% 6%; display: grid; gap: 7%; align-content: start; }
+.browser .h { font-family: var(--display); font-weight: 900; font-stretch: 110%; font-size: clamp(14px, 2.6vw, 26px); color: #fff; line-height: 1; }
+.browser .h span { color: #ff4fa3; }
+.steps { display: flex; gap: 4%; }
+.steps div { flex: 1; border-radius: 8px; padding: 6% 5%; background: #1d1626; color: #cdbce0; font-size: clamp(7px, 1.1vw, 11px); line-height: 1.3; border: 1px solid transparent; }
+.steps div b { display: block; color: #fff; font-size: 1.3em; }
+.join { justify-self: start; padding: 2.4% 5%; border-radius: 99px; background: #ff4fa3; color: #fff; font-weight: 700; font-size: clamp(8px, 1.3vw, 13px); }
+.cursor { position: absolute; width: 18px; height: 18px; left: 70%; top: 80%; z-index: 4; }
+.cursor::before { content: ""; position: absolute; inset: 0; background: #fff; clip-path: polygon(0 0, 0 100%, 30% 72%, 55% 100%, 68% 92%, 45% 66%, 85% 62%); filter: drop-shadow(0 2px 2px rgba(0,0,0,.6)); }
+.toast { position: absolute; right: 12%; top: 26%; z-index: 4; background: #fff; color: #1b0638; border-radius: 10px; padding: 6px 10px; font-weight: 700; font-size: clamp(9px, 1.4vw, 13px); opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .cursor { animation: move 6s ease-in-out infinite; }
+  @keyframes move { 0% { left: 75%; top: 85%; } 18% { left: 22%; top: 52%; } 30% { left: 46%; top: 52%; } 42% { left: 70%; top: 52%; } 60%, 72% { left: 15%; top: 72%; } 100% { left: 75%; top: 85%; } }
+  .steps div:nth-child(1) { animation: hl 6s infinite; } .steps div:nth-child(2) { animation: hl 6s 1s infinite; } .steps div:nth-child(3) { animation: hl 6s 2s infinite; }
+  @keyframes hl { 0%, 12%, 100% { border-color: transparent; } 16%, 26% { border-color: #ff4fa3; background: #2a1638; } }
+  .join { animation: press 6s infinite; }
+  @keyframes press { 0%, 62%, 70%, 100% { transform: scale(1); } 66% { transform: scale(.9); } }
+  .toast { animation: toast 6s infinite; }
+  @keyframes toast { 0%, 66% { opacity: 0; transform: translateY(6px); } 72%, 92% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+}
+
+/* ============ CREDITS ============ */
+.credits { position: relative; text-align: center; overflow: hidden; border-top: 1px solid var(--line); }
+.credits::before { content: ""; position: absolute; left: 50%; top: -20%; width: 120%; height: 90%; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(255,181,71,.16), transparent); pointer-events: none; }
+.credits .wrap { position: relative; display: grid; gap: 40px; justify-items: center; padding-block: clamp(90px, 12vw, 160px); }
+.roll { display: grid; gap: 22px; font-size: 15px; }
+.roll div { display: grid; gap: 2px; }
+.roll span { color: var(--dim); }
+.roll b { font-family: var(--display); font-weight: 700; font-stretch: 120%; font-size: 22px; }
+.credits h2 { font-size: clamp(56px, 11vw, 160px); }
+.credits p { margin: 0; color: var(--dim); max-width: 30em; font-size: 18px; }
+.credits .actions { justify-content: center; }
+.handle { font-variant-numeric: tabular-nums; color: var(--bone); font-weight: 700; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; padding-block: 24px; color: var(--dim); font-size: 14px; }
+</style>
 </head>
-<body class="min-h-screen mesh-gradient text-zinc-300 selection:bg-orange-500/20 selection:text-orange-200">
+<body>
 
-  <!-- Sticky Header -->
-  <header class="sticky top-0 z-50 border-b border-white/5 bg-[#09090b]/80 backdrop-blur-xl">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="h-10 w-10 rounded-xl overflow-hidden border border-orange-500/20 group-hover:border-orange-500/50 transition-colors duration-300 bg-zinc-900 flex items-center justify-center">
-          <img src="./assets/pfp.jpeg" alt="Abdulbasit Avatar" class="h-full w-full object-cover">
-        </div>
-        <div>
-          <span class="font-bold tracking-tight text-white block text-sm group-hover:text-orange-400 transition-colors">Abdulbasit</span>
-          <span class="text-[11px] text-zinc-500 font-mono-code block -mt-0.5">@ayoadhe</span>
-        </div>
-      </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
-        <a href="#stats" class="hover:text-orange-400 transition-colors">Proof & Stats</a>
-        <a href="#specialties" class="hover:text-orange-400 transition-colors">Expertise</a>
-        <a href="#contact" class="hover:text-orange-400 transition-colors">Contact</a>
-      </nav>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">AYOADHE</a>
+    <nav aria-label="Sections">
+      <a class="sm-hide" href="#crafts">What I do</a>
+      <a class="sm-hide" href="#results">Results</a>
+      <a class="sm-hide" href="#reel">Reel</a>
+      <a href="#contact">Hire me</a>
+    </nav>
+  </div>
+</header>
 
-      <div class="flex items-center gap-3">
-        <a href="https://x.com/ayoadhe" target="_blank" rel="noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white transition" title="X Profile">
-          <i data-lucide="twitter" class="w-4 h-4"></i>
+<main id="top">
+  <section class="hero" aria-label="Introduction">
+    <canvas id="embers" aria-hidden="true"></canvas>
+    <div class="hero-still" aria-hidden="true"></div>
+    <div class="eyes" aria-hidden="true"><i></i><i></i></div>
+    <div class="bar t" aria-hidden="true"></div><div class="bar b" aria-hidden="true"></div>
+    <div class="wrap hero-copy">
+      <h1 class="name"><span>Abdul</span><span>basit</span></h1>
+      <p class="role-line">The <b id="role">growth marketer</b> your launch needs.</p>
+      <p class="lede">I make Web3 projects impossible to scroll past. <strong>I write the threads, make the AI videos and run the referral campaigns</strong> that turn attention into signups, volume and community.</p>
+      <div class="actions">
+        <a class="btn hot" href="https://t.me/ayoadhe" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1.1-1 .2-1.5L20.5 2.9c.9-.3 1.7.2 1.4 1.4Z"/></svg>
+          Start a project
         </a>
-        <a href="https://t.me/ayoadhe" target="_blank" rel="noreferrer" class="flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gradient-to-r from-orange-500/10 to-pink-500/10 border border-orange-500/30 text-orange-400 hover:from-orange-500 hover:to-pink-500 hover:text-white hover:border-transparent font-semibold text-xs transition-all duration-300">
-          <i data-lucide="send" class="w-3.5 h-3.5"></i>
-          <span>Telegram</span>
-        </a>
+        <a class="btn" href="#reel">Watch the reel</a>
       </div>
+      <div class="timecode" aria-hidden="true"><span id="tc">00:00:00:00</span></div>
     </div>
-  </header>
+  </section>
 
-  <!-- Hero Section -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-12 sm:pt-24 sm:pb-20">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-8 space-y-8">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/10 text-orange-400 text-xs font-mono-code font-semibold tracking-wide">
-          <i data-lucide="zap" class="w-3.5 h-3.5"></i>
-          DEFI • AI CREATOR • PREDICTION MARKETS
-        </div>
+  <div class="ticker" aria-label="Projects I've worked with">
+    <div class="ticker-track">
+      <span>Wahoo Predict</span><span>Agent Dojo</span><span>Fomopoly</span><span>DOPE</span><span>Ngoat</span><span>Gib.work</span><span>Traction</span>
+      <span aria-hidden="true">Wahoo Predict</span><span aria-hidden="true">Agent Dojo</span><span aria-hidden="true">Fomopoly</span><span aria-hidden="true">DOPE</span><span aria-hidden="true">Ngoat</span><span aria-hidden="true">Gib.work</span><span aria-hidden="true">Traction</span>
+    </div>
+  </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tighter text-white leading-[1.1]">
-          High-Visibility Growth for <br class="hidden sm:block">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-500 to-fuchsia-500">Web3 Ecosystems.</span>
-        </h1>
-
-        <p class="text-base sm:text-lg text-zinc-400 max-w-2xl font-light leading-relaxed">
-          I'm <strong class="text-zinc-100 font-semibold">Abdulbasit</strong>, a Web3 growth marketer, AI creator, and DeFi & Prediction Market specialist. As a dedicated content writer and AI video producer, I craft compelling narratives and visibility campaigns that drive real volume to decentralized platforms.
-        </p>
-
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a href="https://t.me/ayoadhe" target="_blank" rel="noreferrer" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold text-sm hover:from-orange-400 hover:to-pink-500 transition-all duration-300 flex items-center gap-2 fiery-glow">
-            <i data-lucide="send" class="w-4 h-4"></i>
-            <span>Contact on Telegram</span>
-          </a>
-          <a href="https://x.com/ayoadhe" target="_blank" rel="noreferrer" class="px-6 py-3.5 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 font-semibold text-sm hover:border-zinc-600 hover:text-white transition-all duration-300 flex items-center gap-2">
-            <i data-lucide="twitter" class="w-4 h-4"></i>
-            <span>Contact on X</span>
-          </a>
-        </div>
+  <section class="block" id="crafts">
+    <div class="wrap">
+      <div class="intro">
+        <h2>Three crafts, one goal</h2>
+        <p>Most projects hire a marketer, a writer and a video editor separately. I do all three, so the story, the visuals and the growth plan come out of one head and point in one direction.</p>
       </div>
-
-      <!-- Profile Avatar Card -->
-      <div class="lg:col-span-4 flex justify-center lg:justify-end">
-        <div class="glass-card rounded-3xl p-4 w-full max-w-xs relative group">
-          <div class="relative aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 mb-5 flex items-center justify-center text-zinc-700">
-            <img src="./assets/pfp.jpeg" alt="Abdulbasit profile photo" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-black/0"></div>
-            <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10 text-[10px] font-mono-code text-orange-400 font-medium">
-              ● AI CREATOR
+      <div class="crafts">
+        <article class="craft">
+          <div class="viz viz-growth" aria-hidden="true">
+            <svg viewBox="0 0 340 220" preserveAspectRatio="none">
+              <defs><linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8263f" stop-opacity=".35"/><stop offset="1" stop-color="#e8263f" stop-opacity="0"/></linearGradient></defs>
+              <g class="grid"><line x1="0" y1="55" x2="340" y2="55"/><line x1="0" y1="110" x2="340" y2="110"/><line x1="0" y1="165" x2="340" y2="165"/></g>
+              <path class="area" d="M0 200 C40 196 70 190 100 178 S160 150 190 128 S250 70 300 34 L300 220 L0 220 Z"/>
+              <path class="curve" d="M0 200 C40 196 70 190 100 178 S160 150 190 128 S250 70 300 34"/>
+              <circle class="dot" cx="300" cy="34" r="7"/>
+            </svg>
+            <div class="tag"><span data-count="630">630</span><small>people referred</small></div>
+          </div>
+          <div class="txt">
+            <h3>Growth marketing</h3>
+            <p>Referral funnels, campaign strategy and community pushes for prediction markets, DeFi and AI projects. I measure success in signups and onchain activity.</p>
+            <ul><li>Referral campaigns</li><li>Launch strategy</li><li>Community growth</li></ul>
+          </div>
+        </article>
+        <article class="craft">
+          <div class="viz viz-write" aria-hidden="true">
+            <div class="tweet">
+              <div class="av"></div>
+              <div>
+                <div class="who"><b>Abdulbasit</b> @ayoadhe</div>
+                <div class="body"><span id="typed">Most people lose money on prediction markets for one reason. Here's how to fix it 🧵</span><span class="caret"></span></div>
+              </div>
             </div>
+            <div class="stats-row"><span>Thread</span><span><b>1/9</b></span></div>
           </div>
-          <div class="space-y-1 px-1">
-            <h3 class="text-white font-bold text-lg tracking-tight">Abdulbasit</h3>
-            <p class="text-sm text-zinc-400">Web3 Marketer & AI Specialist</p>
+          <div class="txt">
+            <h3>Content writing</h3>
+            <p>Threads, explainers and launch copy that make complex protocols simple. People read to the end, understand the product, and click through.</p>
+            <ul><li>X threads</li><li>Explainers</li><li>Launch copy</li></ul>
           </div>
-          <div class="mt-5 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-zinc-500 font-mono-code px-1">
-            <span>NETWORK</span>
-            <span class="text-orange-400 font-medium bg-orange-400/10 px-2 py-0.5 rounded">Solana / Multi</span>
+        </article>
+        <article class="craft">
+          <div class="viz viz-ai" aria-hidden="true">
+            <div class="frame"></div>
+            <div class="hud"><span>Generating</span><span id="frames">frame 0142</span></div>
           </div>
-        </div>
+          <div class="txt">
+            <h3>AI creation</h3>
+            <p>Cinematic AI video, motion graphics and voiceovers. I turn a feature launch or a referral program into something people stop and watch.</p>
+            <ul><li>AI video</li><li>Motion graphics</li><li>Voiceover</li></ul>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Verified Proof / Metrics Grid -->
-  <section id="stats" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-    <div class="mb-10">
-      <div class="text-xs font-mono-code uppercase tracking-widest text-orange-500 font-bold mb-2">Traction & Verified Numbers</div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Proof of Execution</h2>
-      <p class="text-zinc-400 text-base mt-3 max-w-2xl leading-relaxed">Real referral volumes, creator onboarding, and campaign conversions backed by live dashboard data.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      
-      <!-- Proof 1: Gib.work -->
-      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between mb-5">
-            <span class="px-3 py-1.5 rounded-lg text-[10px] font-mono-code font-bold bg-orange-500/10 text-orange-400 border border-orange-500/20">GIB.WORK</span>
-            <span class="text-[10px] text-zinc-500 font-mono-code uppercase tracking-wider">Bounties & Referrals</span>
-          </div>
-          
-          <div class="rounded-xl overflow-hidden border border-white/5 bg-zinc-900/50 mb-5 aspect-[16/9] flex items-center justify-center">
-            <img src="./assets/gibwork-proof.jpeg" alt="Gib.work Proof" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
-          </div>
-
-          <div class="grid grid-cols-3 gap-2 text-center py-4 border-y border-white/5 my-2">
-            <div>
-              <div class="text-2xl font-black text-white">8</div>
-              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Payments</div>
-            </div>
-            <div class="border-x border-white/5">
-              <div class="text-2xl font-black text-orange-400">352</div>
-              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Pending</div>
-            </div>
-            <div>
-              <div class="text-2xl font-black text-white">$1k</div>
-              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Per Ref</div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-4 flex items-center justify-between text-xs font-mono-code text-zinc-400 bg-zinc-900/80 px-4 py-2.5 rounded-xl border border-white/5">
-          <span class="truncate">gib.work?ref=abdulbasit</span>
-          <i data-lucide="check-circle-2" class="w-4 h-4 text-orange-500 shrink-0 ml-2"></i>
-        </div>
+  <section class="block" id="results">
+    <div class="wrap">
+      <div class="intro">
+        <h2>The numbers</h2>
+        <p>Every figure here comes from my own dashboards. Tap a screenshot to see the proof.</p>
       </div>
-
-      <!-- Proof 2: Ngoat.xyz -->
-      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between mb-5">
-            <span class="px-3 py-1.5 rounded-lg text-[10px] font-mono-code font-bold bg-pink-500/10 text-pink-400 border border-pink-500/20">NGOAT.XYZ</span>
-            <span class="text-[10px] text-zinc-500 font-mono-code uppercase tracking-wider">Prediction Protocol</span>
+      <div class="results">
+        <article class="res">
+          <div class="res-head"><h3>Wahoo Predict</h3><span class="what">Prediction market</span></div>
+          <p class="big"><span data-count="400">400</span><small>USDT credited</small></p>
+          <ul class="facts"><li><b>310</b> invited</li><li><b>7</b> rewards</li></ul>
+          <div class="res-links">
+            <button class="chip" type="button" data-shot="./assets/wahoo-proof.jpeg" data-alt="Wahoo Predict rewards page: 400 USDT credited, 7 rewards, 310 invited">See proof</button>
           </div>
-          
-          <div class="rounded-xl overflow-hidden border border-white/5 bg-zinc-900/50 mb-5 aspect-[16/9] flex items-center justify-center">
-            <img src="./assets/ngoat-proof.jpeg" alt="Ngoat Proof" class="w-full h-full object-cover object-top opacity-90 transition-opacity">
+        </article>
+
+        <article class="res">
+          <div class="res-head"><h3>Gib.work</h3><span class="what">Bounties</span></div>
+          <p class="big"><span data-count="352">352</span><small>pending</small></p>
+          <ul class="facts"><li><b>8</b> paid out</li><li><b>$1,000</b> per referral</li></ul>
+          <div class="res-links">
+            <button class="chip" type="button" data-shot="./assets/gibwork-proof.jpeg" data-alt="Gib.work: 8 payments, 352 pending, $1,000 per referral">See proof</button>
+            <a class="chip" href="https://gib.work?ref=abdulbasit" target="_blank" rel="noreferrer">Join with my link</a>
           </div>
+        </article>
 
-          <div class="grid grid-cols-3 gap-2 text-center py-4 border-y border-white/5 my-2">
-            <div>
-              <div class="text-2xl font-black text-white">269</div>
-              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Referrals</div>
-            </div>
-            <div class="border-x border-white/5">
-              <div class="text-2xl font-black text-pink-400">+2k</div>
-              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">NGC Bonus</div>
-            </div>
-            <div>
-              <div class="text-2xl font-black text-white">33%</div>
-              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Win Rate</div>
-            </div>
+        <article class="res">
+          <div class="res-head"><h3>Ngoat</h3><span class="what">Prediction protocol</span></div>
+          <p class="big"><span data-count="269">269</span><small>referrals</small></p>
+          <ul class="facts"><li><b>2,000</b> NGC per signup</li><li><b>33%</b> win rate</li></ul>
+          <div class="res-links">
+            <button class="chip" type="button" data-shot="./assets/ngoat-proof.jpeg" data-alt="Ngoat: 269 referrals so far">See proof</button>
+            <a class="chip" href="https://www.ngoat.xyz/register?ref=54C9D212" target="_blank" rel="noreferrer">Join with my link</a>
           </div>
-        </div>
-        <div class="mt-4 flex items-center justify-between text-xs font-mono-code text-zinc-400 bg-zinc-900/80 px-4 py-2.5 rounded-xl border border-white/5">
-          <span class="truncate">ngoat.xyz/register?ref=54C9...</span>
-          <i data-lucide="check-circle-2" class="w-4 h-4 text-pink-500 shrink-0 ml-2"></i>
-        </div>
-      </div>
+        </article>
 
-      <!-- Proof 3: Traction -->
-      <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between mb-5">
-            <span class="px-3 py-1.5 rounded-lg text-[10px] font-mono-code font-bold bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20">TRACTION</span>
-            <span class="text-[10px] text-zinc-500 font-mono-code uppercase tracking-wider">Creator Network</span>
+        <article class="res" style="grid-column: span 12;">
+          <div class="res-head"><h3>Traction</h3><span class="what">Creator network</span></div>
+          <p class="big"><span data-count="51">51</span><small>creators brought on, all organic</small></p>
+          <div class="res-links">
+            <button class="chip" type="button" data-shot="./assets/traction-proof.jpeg" data-alt="Traction: 51 creators referred">See proof</button>
+            <a class="chip" href="https://usetraction.xyz/?ref=PDVSPPC" target="_blank" rel="noreferrer">Join with my link</a>
           </div>
-          
-          <div class="rounded-xl overflow-hidden border border-white/5 bg-zinc-900/50 mb-5 aspect-[16/9] flex items-center justify-center">
-            <img src="./assets/traction-proof.jpeg" alt="Traction Proof" class="w-full h-full object-cover opacity-90 transition-opacity">
-          </div>
-
-          <div class="grid grid-cols-2 gap-2 text-center py-4 border-y border-white/5 my-2">
-            <div>
-              <div class="text-2xl font-black text-fuchsia-400">51</div>
-              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Creators Referred</div>
-            </div>
-            <div class="border-l border-white/5">
-              <div class="text-2xl font-black text-white">100%</div>
-              <div class="text-[9px] text-zinc-500 uppercase tracking-widest mt-1">Organic Funnel</div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-4 flex items-center justify-between text-xs font-mono-code text-zinc-400 bg-zinc-900/80 px-4 py-2.5 rounded-xl border border-white/5">
-          <span class="truncate">usetraction.xyz/?ref=PDV...</span>
-          <i data-lucide="check-circle-2" class="w-4 h-4 text-fuchsia-500 shrink-0 ml-2"></i>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Capabilities -->
-  <section id="specialties" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-    <div class="mb-10">
-      <div class="text-xs font-mono-code uppercase tracking-widest text-pink-500 font-bold mb-2">Capabilities</div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">What I Bring To Ecosystems</h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      
-      <!-- Skill 1: Content Writing -->
-      <div class="glass-card rounded-3xl p-8">
-        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500/20 to-pink-500/20 border border-orange-500/30 text-orange-400 flex items-center justify-center mb-6 shadow-inner">
-          <i data-lucide="pen-tool" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3">Strategic Content Writing</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed">
-          Translating complex protocol mechanics into clear, engaging narratives. I write deep-dive threads and compelling copy that capture attention, build trust, and educate communities across Web3.
-        </p>
-      </div>
-
-      <!-- Skill 2: Prediction Markets & Ecosystem Visibility -->
-      <div class="glass-card rounded-3xl p-8">
-        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500/20 to-fuchsia-500/20 border border-pink-500/30 text-pink-400 flex items-center justify-center mb-6 shadow-inner">
-          <i data-lucide="eye" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3">Ecosystem Visibility</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed">
-          Engineering targeted growth campaigns tailored for Prediction Markets, DeFi protocols, and AI projects. I position your product directly in front of high-intent audiences to maximize on-chain activity.
-        </p>
-      </div>
-
-      <!-- Skill 3: AI Video & Distribution -->
-      <div class="glass-card rounded-3xl p-8">
-        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-500/20 to-purple-500/20 border border-fuchsia-500/30 text-fuchsia-400 flex items-center justify-center mb-6 shadow-inner">
-          <i data-lucide="video" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3">AI Video & Distribution</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed">
-          Producing cinematic, viral AI video content paired with direct creator syndication across X and Telegram. I turn standard announcements into immersive visual assets that sustain community retention.
-        </p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Contact Area -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
-    <div class="glass-card rounded-[2.5rem] p-8 sm:p-16 relative overflow-hidden border border-orange-500/20">
-      <!-- Decorative background glow -->
-      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-orange-500/10 blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-pink-500/10 blur-3xl"></div>
-      
-      <div class="max-w-2xl space-y-6 relative z-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 text-orange-400 text-xs font-mono-code font-bold tracking-wide border border-orange-500/20">
-          READY FOR NEW CAMPAIGNS
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">Let's scale your project's traction.</h2>
-        <p class="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl">
-          Whether you need comprehensive AI content architecture, a dedicated growth partner, or referral campaign dominance across X and Telegram, let's talk.
-        </p>
-        
-        <div class="flex flex-wrap items-center gap-4 pt-6">
-          <a href="https://t.me/ayoadhe" target="_blank" rel="noreferrer" class="px-8 py-4 rounded-xl bg-white text-black font-extrabold text-sm hover:bg-zinc-200 transition-colors duration-300 flex items-center gap-2">
-            <i data-lucide="send" class="w-4 h-4"></i>
-            <span>Contact on Telegram</span>
-          </a>
-          <a href="https://x.com/ayoadhe" target="_blank" rel="noreferrer" class="px-8 py-4 rounded-xl bg-zinc-900 border border-zinc-700 text-white font-semibold text-sm hover:bg-zinc-800 transition-colors duration-300 flex items-center gap-2">
-            <i data-lucide="twitter" class="w-4 h-4"></i>
-            <span>Contact on X</span>
-          </a>
-        </div>
+  <section class="block" id="reel">
+    <div class="wrap">
+      <div class="intro">
+        <h2>The reel</h2>
+        <p>Recent motion graphics and promo videos for Web3 games and platforms. Each one pairs a script I wrote with AI visuals and voiceover.</p>
+      </div>
+      <div class="reel">
+        <article class="cut">
+          <div class="screen dojo" aria-label="Animated preview: two pixel fighters battling in the Agent Dojo arena">
+            <div class="hud"><span class="rec">Agent Dojo promo</span><span class="tc">00:00</span></div>
+            <div class="logo">AGENT DOJO</div>
+            <div class="hp l"><i></i></div><div class="hp r"><i></i></div>
+            <div class="fighter a"></div><div class="fighter b"></div>
+            <div class="ko">K.O.!</div>
+            <div class="turn">TURN 07<br>YOUR AGENT USES COUNTER</div>
+          </div>
+          <div class="cut-copy">
+            <h3>Agent Dojo</h3>
+            <div class="actions"><a class="btn hot" href="https://x.com/agentdojo" target="_blank" rel="noreferrer">Watch the post on X</a></div>
+          </div>
+        </article>
+
+        <article class="cut">
+          <div class="screen fomo" aria-label="Animated preview: land plots lighting up and selling on the Fomopoly board">
+            <div class="hud"><span class="rec">Fomopoly promo</span><span class="tc">00:00</span></div>
+            <div class="title">FOMO<br><span>POLY</span></div>
+            <div class="price">Plot #142 value<b id="plot">+12.4%</b></div>
+            <div class="board" aria-hidden="true"></div>
+            <span class="sold s1">SOLD</span><span class="sold s2">SOLD</span><span class="sold s3">SOLD</span>
+          </div>
+          <div class="cut-copy">
+            <h3>Fomopoly</h3>
+            <div class="actions"><a class="btn hot" href="https://x.com/fomopoly_rh" target="_blank" rel="noreferrer">Watch the post on X</a></div>
+          </div>
+        </article>
+
+        <article class="cut">
+          <div class="screen dope" aria-label="Animated preview: a cursor walking through the DOPE affiliate signup steps">
+            <div class="hud"><span class="rec">DOPE affiliate</span><span class="tc">00:00</span></div>
+            <div class="browser">
+              <div class="chrome"><i></i><i></i><i></i><span>dope.xyz/affiliate</span></div>
+              <div class="pg">
+                <div class="h">Earn with <span>DOPE</span></div>
+                <div class="steps"><div><b>1</b>Connect wallet</div><div><b>2</b>Get your link</div><div><b>3</b>Share and earn</div></div>
+                <div class="join">Join affiliate program</div>
+              </div>
+            </div>
+            <div class="cursor"></div>
+            <div class="toast">+ Commission earned</div>
+          </div>
+          <div class="cut-copy">
+            <h3>DOPE</h3>
+            <div class="actions"><a class="btn hot" href="https://x.com/dopexyz" target="_blank" rel="noreferrer">Watch the post on X</a></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
+</main>
 
-  <footer class="border-t border-white/5 py-10 text-center text-xs text-zinc-600 font-mono-code mt-10">
-    <p>© 2026 Abdulbasit (@ayoadhe). All rights reserved.</p>
-  </footer>
+<section class="credits" id="contact">
+  <div class="wrap">
+    <div class="roll" aria-label="Credits">
+      <div><span>Growth strategy by</span><b>Abdulbasit</b></div>
+      <div><span>Written by</span><b>Abdulbasit</b></div>
+      <div><span>AI visuals by</span><b>Abdulbasit</b></div>
+      <div><span>Starring</span><b>Your project</b></div>
+    </div>
+    <h2>Your launch is next</h2>
+    <p>Tell me what you're launching and who it's for. I'll come back with a plan for the story, the videos and the growth push.</p>
+    <div class="actions">
+      <a class="btn hot" href="https://t.me/ayoadhe" target="_blank" rel="noreferrer">Message me on Telegram</a>
+      <a class="btn" href="https://x.com/ayoadhe" target="_blank" rel="noreferrer">DM me on X</a>
+    </div>
+    <p>Telegram and X: <span class="handle">@ayoadhe</span></p>
+  </div>
+</section>
 
-  <script>
-    lucide.createIcons();
-  </script>
+<footer><div class="wrap"><span>© 2026 Abdulbasit</span><span>Growth marketer, content writer, AI creator</span></div></footer>
+
+<dialog id="proof"><img id="proof-img" alt=""><form method="dialog"><button class="btn" type="submit">Close</button></form></dialog>
+
+<script>
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Embers */
+  var c = document.getElementById('embers'), ctx = c.getContext('2d'), parts = [], W, H, dpr;
+  function size() { dpr = Math.min(devicePixelRatio || 1, 2); W = c.clientWidth; H = c.clientHeight; c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+  function spawn(y) { return { x: Math.random() * W, y: y == null ? H + 10 : y, r: Math.random() * 2.2 + .4, vy: Math.random() * .6 + .2, vx: (Math.random() - .5) * .3, a: Math.random() * .7 + .2, hue: Math.random() < .7 ? '232,38,63' : '255,181,71', ph: Math.random() * 6 }; }
+  size(); for (var i = 0; i < 110; i++) parts.push(spawn(Math.random() * H));
+  addEventListener('resize', size);
+  var mx = 0; addEventListener('pointermove', function (e) { mx = (e.clientX / innerWidth - .5); });
+  function frame(t) {
+    ctx.clearRect(0, 0, W, H);
+    var g = ctx.createRadialGradient(W * .75, H * .55, 0, W * .75, H * .55, Math.max(W, H) * .6);
+    g.addColorStop(0, 'rgba(232,38,63,.16)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    parts.forEach(function (p, i) {
+      p.y -= p.vy; p.x += p.vx + Math.sin(t / 900 + p.ph) * .25 + mx * .4;
+      if (p.y < -10) parts[i] = spawn();
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283);
+      ctx.fillStyle = 'rgba(' + p.hue + ',' + (p.a * (.6 + .4 * Math.sin(t / 300 + p.ph))) + ')';
+      ctx.shadowBlur = 12; ctx.shadowColor = 'rgba(' + p.hue + ',.9)'; ctx.fill();
+    });
+    ctx.shadowBlur = 0;
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  /* Timecodes */
+  var start = performance.now(), tc = document.getElementById('tc'), tcs = document.querySelectorAll('.screen .tc');
+  function pad(n) { return String(n).padStart(2, '0'); }
+  if (!reduce) setInterval(function () {
+    var s = (performance.now() - start) / 1000;
+    tc.textContent = '00:' + pad(Math.floor(s / 60) % 60) + ':' + pad(Math.floor(s) % 60) + ':' + pad(Math.floor(s * 24) % 24);
+    tcs.forEach(function (el) { el.textContent = pad(Math.floor(s / 60) % 60) + ':' + pad(Math.floor(s) % 60); });
+  }, 1000 / 24);
+
+  /* Rotating role */
+  var roles = ['growth marketer', 'content writer', 'AI creator'], ri = 0, role = document.getElementById('role');
+  if (!reduce) setInterval(function () {
+    ri = (ri + 1) % roles.length;
+    role.animate([{ opacity: 1, filter: 'blur(0)' }, { opacity: 0, filter: 'blur(8px)' }], { duration: 250, fill: 'forwards' }).onfinish = function () {
+      role.textContent = roles[ri];
+      role.animate([{ opacity: 0, filter: 'blur(8px)' }, { opacity: 1, filter: 'blur(0)' }], { duration: 350, fill: 'forwards' });
+    };
+  }, 2600);
+
+  /* Typing thread */
+  var lines = ['Most people lose money on prediction markets for one reason. Here\'s how to fix it 🧵', 'I referred 310 people to one platform in a few weeks. Here\'s the exact playbook 👇', 'Your protocol isn\'t hard to use. It\'s hard to explain. Let\'s change that.'];
+  var typed = document.getElementById('typed'), li = 0;
+  function typeLine() {
+    var txt = lines[li], n = 0; typed.textContent = '';
+    var iv = setInterval(function () { typed.textContent = txt.slice(0, ++n); if (n >= txt.length) { clearInterval(iv); setTimeout(function () { li = (li + 1) % lines.length; typeLine(); }, 2600); } }, 38);
+  }
+  if (!reduce) setTimeout(typeLine, 2000);
+
+  /* AI frame counter */
+  var fr = 142, frEl = document.getElementById('frames');
+  if (!reduce) setInterval(function () { fr = fr >= 240 ? 1 : fr + 1; frEl.textContent = 'frame ' + String(fr).padStart(4, '0'); }, 1000 / 30);
+
+  /* Fomopoly board + price */
+  var board = document.querySelector('.board');
+  for (var k = 0; k < 24; k++) { var t = document.createElement('i'); t.style.animationDelay = (Math.random() * 5).toFixed(2) + 's'; board.appendChild(t); }
+  var price = 12.4, plot = document.getElementById('plot');
+  if (!reduce) setInterval(function () { price = Math.max(2, price + (Math.random() - .3) * 1.5); plot.textContent = '+' + price.toFixed(1) + '%'; }, 900);
+
+  /* Count-up when numbers come into view */
+  var fmt = new Intl.NumberFormat('en-US');
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return; io.unobserve(e.target);
+        var el = e.target, end = +el.dataset.count, t0 = performance.now();
+        (function step(now) { var p = Math.min(1, (now - t0) / 1400), v = Math.round(end * (1 - Math.pow(1 - p, 3))); el.textContent = fmt.format(v); if (p < 1) requestAnimationFrame(step); })(t0);
+      });
+    }, { threshold: .6 });
+    document.querySelectorAll('[data-count]').forEach(function (el) { io.observe(el); });
+  }
+
+  /* Proof viewer */
+  var dlg = document.getElementById('proof'), img = document.getElementById('proof-img');
+  document.querySelectorAll('[data-shot]').forEach(function (b) {
+    b.addEventListener('click', function () { img.src = b.dataset.shot; img.alt = b.dataset.alt; if (dlg.showModal) dlg.showModal(); });
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+})();
+</script>
+
 </body>
 </html>
