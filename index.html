@@ -188,7 +188,8 @@ h2 { font-family: var(--display); font-weight: 900; font-stretch: 70%; text-tran
 .lead-shot img { width: 100%; height: 100%; max-width: 100%; object-fit: cover; object-position: top; display: block; transition: transform .6s ease; }
 .lead-shot:hover img { transform: scale(1.04); }
 .lead-copy { display: grid; gap: 16px; align-content: space-between; min-width: 0; }
-@media (max-width: 980px) { .res, .res.lead { grid-column: span 12; } .res.lead { grid-row: auto; grid-template-columns: minmax(0, 1fr); } }
+.res.half { grid-column: span 6; }
+@media (max-width: 980px) { .res, .res.half, .res.lead { grid-column: span 12; } .res.lead { grid-row: auto; grid-template-columns: minmax(0, 1fr); } }
 @media (min-width: 981px) and (max-width: 1100px) { .res { grid-column: span 6; } .res.lead { grid-column: span 12; grid-row: auto; } }
 
 dialog { border: 0; padding: 0; background: transparent; max-width: min(92vw, 520px); max-height: 90vh; }
@@ -349,8 +350,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
 
   <div class="ticker" aria-label="Projects I've worked with">
     <div class="ticker-track">
-      <span>Wahoo Predict</span><span>Agent Dojo</span><span>Fomopoly</span><span>DOPE</span><span>Ngoat</span><span>Gib.work</span><span>Traction</span>
-      <span aria-hidden="true">Wahoo Predict</span><span aria-hidden="true">Agent Dojo</span><span aria-hidden="true">Fomopoly</span><span aria-hidden="true">DOPE</span><span aria-hidden="true">Ngoat</span><span aria-hidden="true">Gib.work</span><span aria-hidden="true">Traction</span>
+      <span>Wahoo Predict</span><span>Agent Dojo</span><span>Fomopoly</span><span>DOPE</span><span>Ngoat</span><span>Gib.work</span><span>Traction</span><span>Pleco Creators</span>
+      <span aria-hidden="true">Wahoo Predict</span><span aria-hidden="true">Agent Dojo</span><span aria-hidden="true">Fomopoly</span><span aria-hidden="true">DOPE</span><span aria-hidden="true">Ngoat</span><span aria-hidden="true">Gib.work</span><span aria-hidden="true">Traction</span><span aria-hidden="true">Pleco Creators</span>
     </div>
   </div>
 
@@ -446,12 +447,22 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
           </div>
         </article>
 
-        <article class="res" style="grid-column: span 12;">
+        <article class="res half">
           <div class="res-head"><h3>Traction</h3><span class="what">Creator network</span></div>
           <p class="big"><span data-count="51">51</span><small>creators brought on, all organic</small></p>
           <div class="res-links">
             <button class="chip" type="button" data-shot="./assets/traction-proof.jpeg" data-alt="Traction: 51 creators referred">See proof</button>
             <a class="chip" href="https://usetraction.xyz/?ref=PDVSPPC" target="_blank" rel="noreferrer">Join with my link</a>
+          </div>
+        </article>
+
+        <article class="res half">
+          <div class="res-head"><h3>Pleco Creators</h3><span class="what">Creator platform</span></div>
+          <p class="big"><span data-count="49">49</span><small>creators approved</small></p>
+          <ul class="facts"><li><b>382</b> link clicks</li><li><b>151</b> applied</li></ul>
+          <div class="res-links">
+            <button class="chip" type="button" data-shot="./assets/pleco-proof.jpeg" data-alt="Pleco Creators: 382 link clicks, 151 applied, 49 approved">See proof</button>
+            <a class="chip" href="https://x.com/ayoadhe/status/2115838002265985282" target="_blank" rel="noreferrer">Check the post on X</a>
           </div>
         </article>
       </div>
@@ -476,7 +487,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
           </div>
           <div class="cut-copy">
             <h3>Agent Dojo</h3>
-            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2116032349859119531" target="_blank" rel="noreferrer">Watch the post on X</a></div>
+            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2116032349859119531" target="_blank" rel="noreferrer">Check the post on X</a></div>
           </div>
         </article>
 
@@ -490,7 +501,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
           </div>
           <div class="cut-copy">
             <h3>Fomopoly</h3>
-            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2116099127755022785" target="_blank" rel="noreferrer">Watch the post on X</a></div>
+            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2116099127755022785" target="_blank" rel="noreferrer">Check the post on X</a></div>
           </div>
         </article>
 
@@ -510,7 +521,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-
           </div>
           <div class="cut-copy">
             <h3>DOPE</h3>
-            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2115782618742489441" target="_blank" rel="noreferrer">Watch the post on X</a></div>
+            <div class="actions"><a class="btn hot" href="https://x.com/ayoadhe/status/2115782618742489441" target="_blank" rel="noreferrer">Check the post on X</a></div>
           </div>
         </article>
       </div>
